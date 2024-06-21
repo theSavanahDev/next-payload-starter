@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 const HomePage = () => {
 	return (
 		<article>
-			<section className="py-5">
+			<section className="p-5">
 				<h1 className="text-4xl font-bold tracking-wide text-sky-800">Your settings are well configured</h1>
 
 				<p className="py-5">
