@@ -13,6 +13,7 @@
 		"@payloadcms/next": "3.0.0-beta.53",
 		"@payloadcms/plugin-cloud": "3.0.0-beta.53",
 		"@payloadcms/richtext-lexical": "3.0.0-beta.53",
+		"@payloadcms/storage-uploadthing": "3.0.0-beta.53",
 		"babel-plugin-react-compiler": "0.0.0-experimental-938cd9a-20240601",
 		"graphql": "^16.8.1",
 		"next": "15.0.0-rc.0",
