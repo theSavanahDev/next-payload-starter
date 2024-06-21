@@ -5,6 +5,18 @@ const nextConfig = {
 	experimental: {
 		reactCompiler: false,
 	},
+	images: {
+		remotePatterns: [
+			{
+				protocol: "https",
+				hostname: "utfs.io",
+			},
+			{
+				protocol: "https",
+				hostname: "res.cloudinary.com",
+			},
+		],
+	},
 };
 
 export default withPayload(nextConfig);

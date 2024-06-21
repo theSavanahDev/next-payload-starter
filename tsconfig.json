@@ -23,6 +23,7 @@
 			"@/app/*": ["./src/app/(app)/*"],
 			"@/collections/*": ["./src/collections/*"],
 			"@/components/*": ["./src/components/*"],
+			"@/lib/*": ["./src/lib/*"],
 			"@/payload/*": ["./src/app/(payload)/*"],
 			"@/payload-config": ["./src/payload.config.ts"]
 		}
