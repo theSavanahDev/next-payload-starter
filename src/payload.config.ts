@@ -10,7 +10,7 @@ import { Users } from "@/collections/users";
 import { Media } from "@/collections/media";
 
 const fileName = fileURLToPath(import.meta.url);
-const databaseURI = process.env.DATABASE_URI!;
+const databaseURI = process.env.DB_URI_PRD!;
 const directoryName = path.dirname(fileName);
 const payloadSecret = process.env.PAYLOAD_SECRET!;
 const uploadthingSecret = process.env.UPLOADTHING_SECRET!;
