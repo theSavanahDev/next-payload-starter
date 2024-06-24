@@ -21,9 +21,10 @@
 		"paths": {
 			"@/*": ["./src/*"],
 			"@/app/*": ["./src/app/(frontend)/*"],
-			"@/blocks/*": ["./src/blocks/*"],
-			"@/collections/*": ["./src/collections/*"],
+			"@/blocks/*": ["./src/payload/blocks/*"],
+			"@/collections/*": ["./src/payload/collections/*"],
 			"@/components/*": ["./src/components/*"],
+			"@/globals/*": ["./src/payload/globals/*"],
 			"@/lib/*": ["./src/lib/*"],
 			"@/payload/*": ["./src/app/(payload)/*"],
 			"@/payload-config": ["./src/payload.config.ts"]
