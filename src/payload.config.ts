@@ -31,7 +31,7 @@ export default buildConfig({
 	},
 	collections: [Users, Media],
 	db: mongooseAdapter({ url: databaseURI }),
-	editor: lexicalEditor(),
+	editor: lexicalEditor({}),
 	plugins: [
 		uploadthingStorage({
 			collections: {
