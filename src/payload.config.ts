@@ -9,6 +9,9 @@ import { uploadthingStorage } from "@payloadcms/storage-uploadthing";
 import { Users } from "@/collections/users";
 import { Media } from "@/collections/media";
 
+import Icon from "@/components/payload/label-icon";
+import Logo from "@/components/payload/label-logo";
+
 const fileName = fileURLToPath(import.meta.url);
 const databaseURI = process.env.DB_URI_PRD!;
 const directoryName = path.dirname(fileName);
@@ -18,6 +21,13 @@ const uploadthingSecret = process.env.UPLOADTHING_SECRET!;
 export default buildConfig({
 	admin: {
 		user: Users.slug,
+		meta: {
+			titleSuffix: " | Payload",
+			icons: [{ url: "/icon.svg" }],
+		},
+		components: {
+			graphics: { Icon, Logo },
+		},
 	},
 	collections: [Users, Media],
 	db: mongooseAdapter({ url: databaseURI }),
