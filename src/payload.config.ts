@@ -1,9 +1,10 @@
 import path from "path";
 import sharp from "sharp";
-import { buildConfig } from "payload";
 import { fileURLToPath } from "url";
-import { lexicalEditor } from "@payloadcms/richtext-lexical";
+import { buildConfig } from "payload";
 import { mongooseAdapter } from "@payloadcms/db-mongodb";
+import { resendAdapter } from "@payloadcms/email-resend";
+import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { uploadthingStorage } from "@payloadcms/storage-uploadthing";
 
 import { Users } from "@/collections/users";
@@ -16,6 +17,7 @@ const fileName = fileURLToPath(import.meta.url);
 const databaseURI = process.env.DB_URI_PRD!;
 const directoryName = path.dirname(fileName);
 const payloadSecret = process.env.PAYLOAD_SECRET!;
+const resendAPIKey = process.env.RESEND_API_KEY!;
 const uploadthingSecret = process.env.UPLOADTHING_SECRET!;
 
 export default buildConfig({
@@ -32,6 +34,11 @@ export default buildConfig({
 	collections: [Users, Media],
 	db: mongooseAdapter({ url: databaseURI }),
 	editor: lexicalEditor({}),
+	email: resendAdapter({
+		defaultFromAddress: "mta@s3.co.ke",
+		defaultFromName: "MTA @ S3",
+		apiKey: resendAPIKey,
+	}),
 	plugins: [
 		uploadthingStorage({
 			collections: {
