@@ -19,7 +19,7 @@
 		"axios": "^1.7.2",
 		"class-variance-authority": "^0.7.0",
 		"clsx": "^2.1.1",
-		"framer-motion": "^11.3.2",
+		"framer-motion": "^11.3.4",
 		"graphql": "^16.9.0",
 		"lucide-react": "^0.408.0",
 		"next": "15.0.0-canary.58",
@@ -40,7 +40,7 @@
 		"postcss": "^8",
 		"prettier": "^3.3.3",
 		"prettier-plugin-tailwindcss": "^0.6.5",
-		"tailwindcss": "^3.4.4",
+		"tailwindcss": "^3.4.6",
 		"typescript": "^5"
 	}
 }
