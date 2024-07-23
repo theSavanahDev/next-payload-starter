@@ -7,8 +7,22 @@ export const Users: CollectionConfig = {
 		plural: "Users",
 	},
 	admin: {
-		useAsTitle: "email",
+		defaultColumns: ["name", "email"],
+		useAsTitle: "name",
 	},
 	auth: true,
-	fields: [],
+	fields: [
+		{
+			name: "name",
+			label: "Name",
+			type: "text",
+			required: true,
+		},
+		{
+			name: "bio",
+			label: "Bio",
+			type: "textarea",
+			maxLength: 500,
+		},
+	],
 };

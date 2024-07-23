@@ -7,11 +7,11 @@ import { resendAdapter } from "@payloadcms/email-resend";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { uploadthingStorage } from "@payloadcms/storage-uploadthing";
 
-import { Users } from "@/collections/users";
-import { Media } from "@/collections/media";
+import { Users } from "@/payload-collections/users";
+import { Media } from "@/payload-collections/media";
 
-import Icon from "@/components/payload/label-icon";
-import Logo from "@/components/payload/label-logo";
+import { Icon } from "@/components/payload/label-icon";
+import { Logo } from "@/components/payload/label-logo";
 
 const fileName = fileURLToPath(import.meta.url);
 const databaseURI = process.env.NODE_ENV === "production" ? process.env.DB_URI_PROD! : process.env.DB_URI_DEV!;
