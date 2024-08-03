@@ -7,7 +7,7 @@ export const Users: CollectionConfig = {
 		plural: "Users",
 	},
 	admin: {
-		defaultColumns: ["name", "email"],
+		defaultColumns: ["email", "name"],
 		useAsTitle: "name",
 	},
 	auth: true,
@@ -17,12 +17,6 @@ export const Users: CollectionConfig = {
 			label: "Name",
 			type: "text",
 			required: true,
-		},
-		{
-			name: "bio",
-			label: "Bio",
-			type: "textarea",
-			maxLength: 500,
 		},
 	],
 };
