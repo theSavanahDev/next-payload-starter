@@ -10,30 +10,30 @@ export const Media: CollectionConfig = {
 		plural: "Media",
 	},
 	upload: {
+		adminThumbnail: "thumbnail",
 		imageSizes: [
 			{
 				name: "thumbnail",
 				width: 400,
-				height: 400,
+				height: 300,
 				position: "centre",
 			},
 			{
 				name: "card",
-				width: 600,
-				height: 800,
+				width: 768,
+				height: 1024,
 				position: "centre",
 			},
 			{
 				name: "banner",
-				width: 1200,
-				height: 630,
+				width: 1280,
+				height: 850,
 				position: "centre",
 			},
 		],
-		adminThumbnail: "thumbnail",
-		mimeTypes: ["image/*"],
+		mimeTypes: ["application/pdf", "image/*"],
 		resizeOptions: {
-			width: 2160,
+			width: 1280,
 		},
 	},
 	fields: [
